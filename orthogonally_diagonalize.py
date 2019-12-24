@@ -7,11 +7,12 @@
 # where D is diagonal matrix with eigenvalues on diagonal entries.
 # P is list of corresponding eigen vectors.
 
-
 import sys
 import numpy
 import scipy.linalg as la
 from numpy.linalg import matrix_power
+
+# Dependencies:
 import function_gram_schmidt as gram
 
 

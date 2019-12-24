@@ -5,6 +5,7 @@
 # Function returns result of gram-schmidt process.
 # At the end, user gets orthonomal basis.
 
+# Dependencies: This function is called from orthogonally_diagonalize.py
 
 import sys
 import numpy
