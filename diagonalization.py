@@ -33,18 +33,24 @@ for line in sys.stdin:
     Matrix.append(Array)
 
 print("Input Matrix is:")
-print(numpy.array(Matrix))
+Matrix = numpy.array(Matrix)
+print(Matrix)
 
-print("---------Diagonalization of Matrix = P * D * P_inverse-------------")
+# If matrix is not square, print error message.
+if(Matrix.shape[0] != Matrix.shape[1]):
+    print("Matrix is not square Matrix.")
 
-print("---------Matrix P:-------------")
-P = eigenvector(Matrix)
-print(P)
+else:
+    print("---------Diagonalization of Matrix = P * D * P_inverse-------------")
 
-print("---------Matrix D:-------------")
-D = diagonal_matrix(Matrix)
-print(D)
+    print("---------Matrix P:-------------")
+    P = eigenvector(Matrix)
+    print(P)
 
-print("-------Matrix P inverse--------")
-P_inv =la.inv(P)
-print(P_inv)
+    print("---------Matrix D:-------------")
+    D = diagonal_matrix(Matrix)
+    print(D)
+
+    print("-------Matrix P inverse--------")
+    P_inv =la.inv(P)
+    print(P_inv)
